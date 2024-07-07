@@ -1,5 +1,6 @@
 ### User Input and Output
 
+
 1. **Input**
 
 - For input we require Scanner class, which can be imported using the java.util.scanner package
@@ -37,19 +38,8 @@ System.out.printf();
 
 ### Data Types
 
-| Data Type | Size | Description |
-|----------|----------|----------|
-| Byte | Data 1   | Data 2   |
-| Short | Data 3   | Data 4   |
-| Int | |
-| Long ||
-| Float ||
-| Double ||
-| Boolean ||
-| Char ||
 
-
-| Data Type | Size | Description |
+| **Data Type** | **Size** | **Description** |
 |----------|----------|----------|
 | byte	 | 1 byte 	| Stores whole numbers from -128 to 127 |
 | short 	| 2 bytes |	Stores whole numbers from -32,768 to 32,767 |
