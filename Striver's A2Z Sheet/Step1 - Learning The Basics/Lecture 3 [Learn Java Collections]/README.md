@@ -1,63 +1,96 @@
-# Java Collections Framework
+# Java Interface
 
 ## List Interface
 
-1. **Array List**
+In Java, the List interface is an ordered collection that allows us to store and access elements sequentially.
 
-Declatration: 
-
+**Declaration:**
 ```
-ArrayList<String> elements = new ArrayList<String>();
-```
+// ArrayList implementation of List
+List<String> list1 = new ArrayList<>();
 
-Java ArrayList Methods:
+// LinkedList implementation of List
+List<String> list2 = new LinkedList<>();
 
-| **Method**                               | **Description**                                                                                                                                                                                   |
-|:----------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| add(int index, Object element)           | This method is used to insert a specific element at a specific position index in a list.                                                                                                          |
-| add(Object o)                            | This method is used to append a specific element to the end of a list.                                                                                                                            |
-| addAll(Collection C)                     | This method is used to append all the elements from a specific collection to the end of the mentioned list, in such an order that the values are returned by the specified collection’s iterator. |
-| addAll(int index, Collection C)          | Used to insert all of the elements starting at the specified position from a specific collection into the mentioned list.                                                                         |
-| clear()                                  | This method is used to remove all the elements from any list.                                                                                                                                     |
-| clone()                                  | This method is used to return a shallow copy of an ArrayList in Java.                                                                                                                             |
-| contains? (Object o)                     | Returns true if this list contains the specified element.                                                                                                                                         |
-| ensureCapacity?(int minCapacity)         | Increases the capacity of this ArrayList instance, if necessary, to ensure that it can hold at least the number of elements specified by the minimum capacity argument.                           |
-| forEach?(Consumer<? super E> action)     | Performs the given action for each element of the Iterable until all elements have been processed or the action throws an exception.                                                              |
-| get?(int index)                          | Returns the element at the specified position in this list.                                                                                                                                       |
-| indexOf(Object O)                        | The index the first occurrence of a specific element is either returned or -1 in case the element is not in the list.                                                                             |
-| isEmpty?()                               | Returns true if this list contains no elements.                                                                                                                                                   |
-| lastIndexOf(Object O)                    | The index of the last occurrence of a specific element is either returned or -1 in case the element is not in the list.                                                                           |
-| listIterator?()                          | Returns a list iterator over the elements in this list (in proper sequence).                                                                                                                      |
-| listIterator?(int index)                 | Returns a list iterator over the elements in this list (in proper sequence), starting at the specified position in the list.                                                                      |
-| remove?(int index)                       | Removes the element at the specified position in this list.                                                                                                                                       |
-| remove? (Object o)                       | Removes the first occurrence of the specified element from this list, if it is present.                                                                                                           |
-| removeAll?(Collection c)                 | Removes from this list all of its elements that are contained in the specified collection.                                                                                                        |
-| removeIf?(Predicate filter)              | Removes all of the elements of this collection that satisfy the given predicate.                                                                                                                  |
-| removeRange?(int fromIndex, int toIndex) | Removes from this list all of the elements whose index is between fromIndex, inclusive, and toIndex, exclusive.                                                                                   |
-| retainAll?(Collection<?> c)              | Retains only the elements in this list that are contained in the specified collection.                                                                                                            |
-| set?(int index, E element)               | Replaces the element at the specified position in this list with the specified element.                                                                                                           |
-| size?()                                  | Returns the number of elements in this list.                                                                                                                                                      |
-| spliterator?()                           | Creates a late-binding and fail-fast Spliterator over the elements in this list.                                                                                                                  |
-| subList?(int fromIndex, int toIndex)     | Returns a view of the portion of this list between the specified fromIndex, inclusive, and toIndex, exclusive.                                                                                    |
-| toArray()                                | This method is used to return an array containing all of the elements in the list in the correct order.                                                                                           |
-| toArray(Object[] O)                      | It is also used to return an array containing all of the elements in this list in the correct order same as the previous method.                                                                  |
-| trimToSize()                             | This method is used to trim the capacity of the instance of the ArrayList to the list’s current size.                                                                                             |
-
-
-2. **Stack**
-
-Declaration:
-
-```
-Stack<Integer> stack = new Stack<>();
+// Stack implementation of List
+List<String> list3 = new Stack<>();
 ```
 
-Methods in Stack Class:
+**Methods:**
+|Methods|Description|
+|:----:|:----:|
+|add()|adds an element to a list|
+|addAll()|adds all elements of one list to another|
+|get()|helps to randomly access elements from lists|
+|iterator()|returns iterator object that can be used to sequentially access elements of lists|
+|set()|changes elements of lists|
+|remove()|removes an element from the list|
+|removeAll()|removes all the elements from the list|
+|clear()|removes all the elements from the list (more efficient than removeAll())|
+|size()|returns the length of lists|
+|toArray()|converts a list into an array|
+|contains()|returns true if a list contains specific element|
 
+### ArrayList
+
+In Java, we use the ArrayList class to implement the functionality of resizable-arrays. In Java, we need to declare the size of an array before we can use it. Once the size of an array is declared, it's hard to change it. To handle this issue, we can use the ArrayList class. It allows us to create resizable arrays. Unlike arrays, arraylists can automatically adjust their capacity when we add or remove elements from them. Hence, arraylists are also known as dynamic arrays.
+
+**Declaration:**
+```
+ArrayList<Type> arrayList= new ArrayList<>();
+```
+
+**Methods:**
 |Method|Description|
-|:---:|:---:|
-|empty()|It returns true if nothing is on the top of the stack. Else| returns false.|
-|peek()|Returns the element on the top of the stack| but does not remove it.|
-|pop()|Removes and returns the top element of the stack. An ‘EmptyStackException’An exception is thrown if we call pop() when the invoking stack is empty.|
-|push(Object element)|Pushes an element on the top of the stack.|
-|search(Object element)|It determines whether an object exists in the stack. If the element is found, It returns the position of the element from the top of the stack, Else it returns -1.|
+|:----:|:----:|
+|size()|Returns the length of the arraylist.|
+|sort()|Sort the arraylist elements.|
+|clone()|Creates a new arraylist with the same element, size, and capacity.|
+|contains()|Searches the arraylist for the specified element and returns a boolean result.|
+|ensureCapacity()|Specifies the total element the arraylist can contain.|
+|isEmpty()|Checks if the arraylist is empty.|
+|indexOf()|Searches a specified element in an arraylist and returns the index of the element.|
+
+### Stack
+
+The Java collections framework has a class named Stack that provides the functionality of the stack data structure. In stack, elements are stored and accessed in Last In First Out manner. That is, elements are added to the top of the stack and removed from the top of the stack.
+
+**Declaration:**
+```
+Stack<Type> stacks = new Stack<>();
+```
+
+**Methods:**
+|Method|Description|
+|:----:|:----:|
+|push()|To add an element to the top of the stack|
+|pop()|To remove an element from the top of the stack|
+|peek()|The peek() method returns an object from the top of the stack.|
+|search()|To search an element in the stack, we use the search() method. It returns the position of the element from the top of the stack.|
+|empty()|To check whether a stack is empty or not, we use the empty() method.|
+
+### LinkedList
+
+The LinkedList class of the Java collections framework provides the functionality of the linked list data structure. Each element in a linked list is known as a node. It consists of 3 fields:
+Prev - stores an address of the previous element in the list. It is null for the first element
+Next - stores an address of the next element in the list. It is null for the last element
+Data - stores the actual data
+
+**Declaration:**
+```
+LinkedList<Type> linkedList = new LinkedList<>();
+```
+
+**Methods:**
+|Method|Description|
+|:----:|:----:|
+|add()|To add an element (node) at the end of the LinkedList.|
+|get()|To access an element from the LinkedList.|
+|set()|To change elements of the LinkedList.|
+|remove()|To remove an element from the LinkedList.|
+|contains()|checks if the LinkedList contains the element|
+|indexOf()|returns the index of the first occurrence of the element|
+|lastIndexOf()|returns the index of the last occurrence of the element|
+|clear()|removes all the elements of the LinkedList|
+|iterator()|returns an iterator to iterate over LinkedList|
+
