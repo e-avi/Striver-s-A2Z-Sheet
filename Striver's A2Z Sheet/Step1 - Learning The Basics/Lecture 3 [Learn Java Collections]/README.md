@@ -94,3 +94,109 @@ LinkedList<Type> linkedList = new LinkedList<>();
 |clear()|removes all the elements of the LinkedList|
 |iterator()|returns an iterator to iterate over LinkedList|
 
+## Queue Interface
+
+The Queue interface of the Java collections framework provides the functionality of the queue data structure. It extends the Collection interface. In queues, elements are stored and accessed in First In, First Out manner. That is, elements are added from the behind and removed from the front.
+
+**Declaration:**
+```
+// LinkedList implementation of Queue
+Queue<String> animal1 = new LinkedList<>();
+
+// Array implementation of Queue
+Queue<String> animal2 = new ArrayDeque<>();
+
+// Priority Queue implementation of Queue
+Queue<String> animal3 = new PriorityQueue<>();
+```
+
+**Methods:**
+|Method|Description|
+|:----:|:----:|
+|add() |Inserts the specified element into the queue. If the task is successful add() returns true, if not it throws an exception.|
+|offer()| Inserts the specified element into the queue. If the task is successful offer() returns true, if not it returns false.|
+|element() | Returns the head of the queue. Throws an exception if the queue is empty.|
+|peek() | Returns the head of the queue. Returns null if the queue is empty.|
+|remove() | Returns and removes the head of the queue. Throws an exception if the queue is empty.|
+|poll() | Returns and removes the head of the queue. Returns null if the queue is empty.|
+
+### LinkedList
+
+Since the LinkedList class also implements the Queue and the Deque interface, it can implement methods of these interfaces as well.
+
+**Methods:**
+|Methods|Descriptions|
+|:----:|:----:|
+|addFirst()|adds the specified element at the beginning of the linked list|
+|addLast()|adds the specified element at the end of the linked list|
+|getFirst()|returns the first element|
+|getLast()|returns the last element|
+|removeFirst()|removes the first element|
+|removeLast()|removes the last element|
+|peek()|returns the first element (head) of the linked list|
+|poll()|returns and removes the first element from the linked list|
+|offer()|adds the specified element at the end of the linked list|
+
+### PriorityQueue
+
+The PriorityQueue class provides the functionality of the heap data structure. Unlike normal queues, priority queue elements are retrieved in sorted order. Suppose, we want to retrieve elements in the ascending order. In this case, the head of the priority queue will be the smallest element. Once this element is retrieved, the next smallest element will be the head of the queue. It is important to note that the elements of a priority queue may not be sorted. However, elements are always retrieved in sorted order.
+
+**Declaration:**
+```
+PriorityQueue<Integer> numbers = new PriorityQueue<>();
+```
+
+**Methods:**
+|Method|Description|
+|:----:|:----:|
+|add() | Inserts the specified element to the queue. If the queue is full, it throws an exception.|
+|offer() | Inserts the specified element to the queue. If the queue is full, it returns false.|
+|peek()|To access elements from a priority queue|
+|remove() | removes the specified element from the queue|
+|poll() | returns and removes the head of the queue|
+|contains(element)|Searches the priority queue for the specified element. If the element is found, it returns true, if not it returns false.|
+|size()|Returns the length of the priority queue.|
+|toArray()|Converts a priority queue to an array and returns it.|
+
+### ArrayDeque
+
+In Java, we can use the ArrayDeque class to implement queue and deque data structures using arrays.
+
+**Declaration:**
+```
+ArrayDeque<Type> animal = new ArrayDeque<>();
+```
+
+**Methods:**
+|Method|Description|
+|:----:|:----:|
+|add() | inserts the specified element at the end of the array deque|
+|addFirst() | inserts the specified element at the beginning of the array deque|
+|addLast() | inserts the specified at the end of the array deque (equivalent to add())|
+|offer() | inserts the specified element at the end of the array deque|
+|offerFirst() | inserts the specified element at the beginning of the array deque|
+|offerLast() | inserts the specified element at the end of the array deque|
+|getFirst() | returns the first element of the array deque|
+|getLast() | returns the last element of the array deque|
+|peek() | returns the first element of the array deque|
+|peekFirst() | returns the first element of the array deque (equivalent to peek())|
+|peekLast() | returns the last element of the array deque|
+|remove() | returns and removes an element from the first element of the array deque|
+|remove(element) | returns and removes the specified element from the head of the array deque|
+|removeFirst() | returns and removes the first element from the array deque (equivalent to remove())|
+|removeLast() | returns and removes the last element from the array deque|
+|poll() | returns and removes the first element of the array deque|
+|pollFirst() | returns and removes the first element of the array deque (equivalent to poll())|
+|pollLast() | returns and removes the last element of the array deque|
+| clear()|To remove all the elements from the array deque|
+|iterator() | returns an iterator that can be used to iterate over the array deque|
+|descendingIterator() | returns an iterator that can be used to iterate over the array deque in reverse order|
+|element()|Returns an element from the head of the array deque.|
+|contains(element)|Searches the array deque for the specified element. If the element is found, it returns true, if not it returns false.|
+|size()|Returns the length of the array deque.|
+|toArray()|Converts array deque to array and returns it.|
+|clone() |Creates a copy of the array deque and returns it.|
+|push() | adds an element to the top of the stack|
+|peek() | returns an element from the top of the stack|
+|pop() | returns and removes an element from the top of the stack|
+
