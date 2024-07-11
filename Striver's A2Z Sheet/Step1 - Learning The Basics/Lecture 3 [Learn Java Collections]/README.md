@@ -282,7 +282,7 @@ TreeSet<String> treeSet = new TreeSet<>();
 
 **Methods:**
 |Method|Description|
-|:----|:----|
+|:----:|:----:|
 |add(Object o)|This method will add the specified element according to the same sorting order mentioned during the creation of the TreeSet. Duplicate entries will not get added.|
 |addAll(Collection c)|This method will add all elements of the specified Collection to the set. Elements in the Collection should be homogeneous otherwise ClassCastException will be thrown. Duplicate Entries of Collection will not be added to TreeSet.|
 |ceiling?(E e)|This method returns the least element in this set greater than or equal to the given element, or null if there is no such element.|
@@ -308,3 +308,102 @@ TreeSet<String> treeSet = new TreeSet<>();
 |subSet(Object fromElement, Object toElement)|This method will return elements ranging from fromElement to toElement. fromElement is inclusive and toElement is exclusive.|
 |tailSet(Object fromElement)|This method will return elements of TreeSet which are greater than or equal to the specified element.|
 
+## Map Interface
+
+**Declaration:**
+```
+// Map implementation using HashMap
+Map<Key, Value> numbers1 = new HashMap<>();
+
+// Map implementation using LinkedHashMap
+Map<Key, Value> numbers2 = new LinkedHashMap<>();
+
+// Map implementation using TreeMap
+Map<Key, Value> numbers3 = new TreeMap<>();
+```
+
+**Methods:**
+|Method|Description|
+|:----:|:----:|
+|put(K/V) - Inserts the association of a key K and a value V into the map. If the key is already present, the new value replaces the old value.|
+|putAll() | Inserts all the entries from the specified map to this map.|
+|putIfAbsent(K/ V) | Inserts the association if the key K is not already associated with the value V.|
+|get(K) | Returns the value associated with the specified key K. If the key is not found, it returns null.|
+|getOrDefault(K/ defaultValue) | Returns the value associated with the specified key K. If the key is not found, it returns the defaultValue.|
+|containsKey(K) | Checks if the specified key K is present in the map or not.|
+|containsValue(V) | Checks if the specified value V is present in the map or not.|
+|replace(K/ V) | Replace the value of the key K with the new specified value V.|
+|replace(K/ oldValue/ newValue) - Replaces the value of the key K with the new value newValue only if the key K is associated with the value oldValue.|
+|remove(K) | Removes the entry from the map represented by the key K.|
+|remove(K/ V) | Removes the entry from the map that has key K associated with value V.|
+|keySet() | Returns a set of all the keys present in a map.|
+|values() | Returns a set of all the values present in a map.|
+|entrySet() | Returns a set of all the key/value mapping present in a map.|
+
+### HashMap
+
+It stores elements in key/value pairs. Here, keys are unique identifiers used to associate each value on a map.
+
+**Declaration:**
+```
+HashMap<String, Integer> numbers = new HashMap<>();
+```
+**Methods:**
+|Method|Description|
+|:----:|:----:|
+|clear()|removes all mappings from the HashMap|
+|compute()|computes a new value for the specified key|
+|computeIfAbsent()|computes value if a mapping for the key is not present|
+|computeIfPresent()|computes a value for mapping if the key is present|
+|merge()|merges the specified mapping to the HashMap|
+|clone()|makes the copy of the HashMap|
+|containsKey()|checks if the specified key is present in Hashmap|
+|containsValue()|checks if Hashmap contains the specified value|
+|size()|returns the number of items in HashMap|
+|isEmpty()|checks if the Hashmap is empty|
+
+### TreeMap
+
+**Declaration:**
+```
+TreeMap<Key, Value> numbers = new TreeMap<>();
+```
+
+**Methods:**
+|Method|Description|
+|:----:|:----:|
+|put() | inserts the specified key/value mapping (entry) to the map|
+|putAll() | inserts all the entries from specified map to this map|
+|putIfAbsent() | inserts the specified key/value mapping to the map if the specified key is not present in the map|
+|entrySet() | returns a set of all the key/values mapping (entry) of a treemap|
+|keySet() | returns a set of all the keys of a tree map|
+|values() | returns a set of all the maps of a tree map|
+|get() | Returns the value associated with the specified key. Returns null if the key is not found.|
+|getOrDefault()| Returns the value associated with the specified key. Returns the specified default value if the key is not found.|
+|remove(key) | returns and removes the entry associated with the specified key from a TreeMap|
+|remove(key, value) | removes the entry from the map only if the specified key is associated with the specified value and returns a boolean value|
+|replace(key, value) | replaces the value mapped by the specified key with the new value|
+|replace(key, old, new) | replaces the old value with the new value only if the old value is already associated with the specified key|
+|replaceAll(function) | replaces each value of the map with the result of the specified function|
+|firstKey() | returns the first key of the map|
+|firstEntry() | returns the key/value mapping of the first key of the map|
+|lastKey() | returns the last key of the map|
+|lastEntry() | returns the key/value mapping of the last key of the map|
+|higherKey() | Returns the lowest key among those keys that are greater than the specified key.|
+|higherEntry() | Returns an entry associated with a key that is lowest among all those keys greater than the specified key.|
+|lowerKey() | Returns the greatest key among all those keys that are less than the specified key.|
+|lowerEntry() | Returns an entry associated with a key that is greatest among all those keys that are less than the specified key.|
+|ceilingKey() | Returns the lowest key among those keys that are greater than the specified key. If the key passed as an argument is present in the map, it returns that key.|
+|ceilingEntry() | Returns an entry associated with a key that is lowest among those keys that are greater than the specified key. It an entry associated with the key passed an argument is present in the map, it returns the entry associated with that key.|
+|floorKey() | Returns the greatest key among those keys that are less than the specified key. If the key passed as an argument is present, it returns that key.|
+|floorEntry() | Returns an entry associated with a key that is greatest among those keys that are less than the specified key. If the key passed as argument is present, it returns that key.|
+|pollFirstEntry() | returns and removes the entry associated with the first key of the map|
+|pollLastEntry() | returns and removes the entry associated with the last key of the map|
+|The headMap() |method returns all the key/value pairs of a treemap before the specified key|
+|The tailMap()|method returns all the key/value pairs of a treemap starting from the specified key (which is passed as an argument).|
+|The subMap()|method returns all the entries associated with keys between k1 and k2 including the entry of k1.|
+|clone()|Creates a copy of the TreeMap|
+|containsKey()|Searches the TreeMap for the specified key and returns a boolean result|
+|containsValue()|Searches the TreeMap for the specified value and returns a boolean result|
+|size()|Returns the size of the TreeMap|
+|clear()|Removes all the entries from the TreeMap|
