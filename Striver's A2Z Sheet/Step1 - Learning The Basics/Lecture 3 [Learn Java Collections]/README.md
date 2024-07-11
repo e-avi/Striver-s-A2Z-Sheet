@@ -200,3 +200,111 @@ ArrayDeque<Type> animal = new ArrayDeque<>();
 |peek() | returns an element from the top of the stack|
 |pop() | returns and removes an element from the top of the stack|
 
+## Set Interface
+
+The Set interface of the Java Collections framework provides the features of the mathematical set in Java. It extends the Collection interface. Unlike the List interface, sets cannot contain duplicate elements.
+
+**Declaration:**
+```
+// Set implementation using HashSet
+Set<String> animals1 = new HashSet<>();
+
+// Set implementation using LinkedHashSet
+Set<String> animals2 = new LinkedHashSet<>();
+
+// Set implementation using TreeSet
+Set<String> animals3 = new TreeSet<>();
+```
+
+**Methods:**
+|Method|Description|
+|:----:|:----:|
+|add() | adds the specified element to the set|
+|addAll() | adds all the elements of the specified collection to the set|
+|iterator() | returns an iterator that can be used to access elements of the set sequentially|
+|remove() | removes the specified element from the set|
+|removeAll() | removes all the elements from the set that is present in another specified set|
+|retainAll() | retains all the elements in the set that are also present in another specified set|
+|clear() | removes all the elements from the set|
+|size() | returns the length (number of elements) of the set|
+|toArray() | returns an array containing all the elements of the set|
+|contains() | returns true if the set contains the specified element|
+|containsAll() | returns true if the set contains all the elements of the specified collection|
+|hashCode() | returns a hash code value (address of the element in the set)|
+
+
+**Operations:**
+Union - to get the union of two sets x and y, we can use x.addAll(y)
+Intersection - to get the intersection of two sets x and y, we can use x.retainAll(y)
+Subset - to check if x is a subset of y, we can use y.containsAll(x)
+
+### HashSet
+
+Implements Set Interface. The underlying data structure for HashSet is Hashtable. As it implements the Set Interface, duplicate values are not allowed. Objects that you insert in HashSet are not guaranteed to be inserted in the same order. Objects are inserted based on their hash code. NULL elements are allowed in HashSet. HashSet also implements Serializable and Cloneable interfaces.
+
+**Declaration:**
+```
+HashSet<ArrayList> set = new HashSet<>();
+```
+
+**Methods:**
+|Method|Description|
+|:----:|:----:|
+|add(E e)|Used to add the specified element if it is not present, if it is present then return false.|
+|clear()|Used to remove all the elements from the set.|
+|contains(Object o)|Used to return true if an element is present in a set.|
+|remove(Object o)|Used to remove the element if it is present in set.|
+|iterator()| Used to return an iterator over the element in the set.|
+|isEmpty()|Used to check whether the set is empty or not. Returns true for empty and false for a non-empty condition for set.|
+|size()|Used to return the size of the set.|
+|clone()  |Used to create a shallow copy of the set.|
+
+### LinkedHashSet
+
+The LinkedHashSet class of the Java collections framework provides functionalities of both the hashtable and the linked list data structure. It implements the Set interface. Elements of LinkedHashSet are stored in hash tables similar to HashSet. However, linked hash sets maintain a doubly-linked list internally for all of its elements. The linked list defines the order in which elements are inserted in hash tables.
+
+**Declaration:**
+```
+LinkedHashSet<Integer> numbers = new LinkedHashSet<>(8, 0.75);
+```
+
+**Methods:**
+Similar to HashSet
+
+### TreeSet
+
+TreeSet is one of the most important implementations of the SortedSet interface in Java that uses a Tree for storage. The ordering of the elements is maintained by a set using their natural ordering whether or not an explicit comparator is provided. This must be consistent with equals if it is to correctly implement the Set interface. 
+
+**Declaration:**
+```
+TreeSet<String> treeSet = new TreeSet<>();
+```
+
+**Methods:**
+|Method|Description|
+|:----|:----|
+|add(Object o)|This method will add the specified element according to the same sorting order mentioned during the creation of the TreeSet. Duplicate entries will not get added.|
+|addAll(Collection c)|This method will add all elements of the specified Collection to the set. Elements in the Collection should be homogeneous otherwise ClassCastException will be thrown. Duplicate Entries of Collection will not be added to TreeSet.|
+|ceiling?(E e)|This method returns the least element in this set greater than or equal to the given element, or null if there is no such element.|
+|clear()|This method will remove all the elements.|
+|clone()|The method is used to return a shallow copy of the set, which is just a simple copied set.|
+|Comparator comparator()|This method will return the Comparator used to sort elements in TreeSet or it will return null if the default natural sorting order is used.|
+|contains(Object o)|This method will return true if a given element is present in TreeSet else it will return false.|
+|descendingIterator?()|This method returns an iterator over the elements in this set in descending order.|
+|descendingSet?()|This method returns a reverse order view of the elements contained in this set.|
+|first()|This method will return the first element in TreeSet if TreeSet is not null else it will throw NoSuchElementException.|
+|floor?(E e)|This method returns the greatest element in this set less than or equal to the given element, or null if there is no such element.|
+|headSet(Object toElement)|This method will return elements of TreeSet which are less than the specified element.|
+|higher?(E e)|This method returns the least element in this set strictly greater than the given element, or null if there is no such element.|
+|isEmpty()|This method is used to return true if this set contains no elements or is empty and false for the opposite case.|
+|Iterator iterator()|Returns an iterator for iterating over the elements of the set.|
+|last()|This method will return the last element in TreeSet if TreeSet is not null else it will throw NoSuchElementException.|
+|lower?(E e)|This method returns the greatest element in this set strictly less than the given element, or null if there is no such element.|
+|pollFirst?()|This method retrieves and removes the first (lowest) element, or returns null if this set is empty.|
+|pollLast?()|This method retrieves and removes the last (highest) element, or returns null if this set is empty.|
+|remove(Object o)|This method is used to return a specific element from the set.|
+|size()|This method is used to return the size of the set or the number of elements present in the set.|
+|spliterator()|This method creates a late-binding and fail-fast Spliterator over the elements in this set.|
+|subSet(Object fromElement, Object toElement)|This method will return elements ranging from fromElement to toElement. fromElement is inclusive and toElement is exclusive.|
+|tailSet(Object fromElement)|This method will return elements of TreeSet which are greater than or equal to the specified element.|
+
